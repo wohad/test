@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.9.6 on win32)" generated="20210805 14:08:09.884" rpa="false">
+<suite id="s1" name="Test" source="C:\Users\admin\eclipse-workspace\test">
+<suite id="s1-s1" name="Suite Test" source="C:\Users\admin\eclipse-workspace\test\suite_test.robot">
+<test id="s1-s1-t1" name="filefind">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>C:/Test/week1.txt</arg>
+</arguments>
+<assign>
+<var>${PATH}</var>
+</assign>
+<msg timestamp="20210805 14:08:09.943" level="INFO">${PATH} = C:/Test/week1.txt</msg>
+<status status="PASS" starttime="20210805 14:08:09.943" endtime="20210805 14:08:09.943"></status>
+</kw>
+<kw name="File Should Exist" library="OperatingSystem">
+<doc>Fails unless the given ``path`` points to an existing file.</doc>
+<arguments>
+<arg>${PATH}</arg>
+</arguments>
+<msg timestamp="20210805 14:08:09.944" level="INFO" html="yes">File '&lt;a href="file://C:\Test\week1.txt"&gt;C:\Test\week1.txt&lt;/a&gt;' exists.</msg>
+<status status="PASS" starttime="20210805 14:08:09.943" endtime="20210805 14:08:09.944"></status>
+</kw>
+<kw name="Grep File" library="OperatingSystem">
+<doc>Returns the lines of the specified file that match the ``pattern``.</doc>
+<arguments>
+<arg>C:/Test/week1.txt</arg>
+<arg>ERROR</arg>
+</arguments>
+<assign>
+<var>${error}</var>
+</assign>
+<msg timestamp="20210805 14:08:09.944" level="INFO" html="yes">Reading file '&lt;a href="file://C:\Test\week1.txt"&gt;C:\Test\week1.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20210805 14:08:09.945" level="INFO">0 out of 13 lines matched</msg>
+<msg timestamp="20210805 14:08:09.945" level="INFO">${error} = </msg>
+<status status="PASS" starttime="20210805 14:08:09.944" endtime="20210805 14:08:09.945"></status>
+</kw>
+<kw name="Grep File" library="OperatingSystem">
+<doc>Returns the lines of the specified file that match the ``pattern``.</doc>
+<arguments>
+<arg>C:/Test/week1.txt</arg>
+<arg>ex*ple</arg>
+</arguments>
+<assign>
+<var>${ret}</var>
+</assign>
+<msg timestamp="20210805 14:08:09.945" level="INFO" html="yes">Reading file '&lt;a href="file://C:\Test\week1.txt"&gt;C:\Test\week1.txt&lt;/a&gt;'.</msg>
+<msg timestamp="20210805 14:08:09.946" level="INFO">0 out of 13 lines matched</msg>
+<msg timestamp="20210805 14:08:09.946" level="INFO">${ret} = </msg>
+<status status="PASS" starttime="20210805 14:08:09.945" endtime="20210805 14:08:09.946"></status>
+</kw>
+<status status="PASS" starttime="20210805 14:08:09.942" endtime="20210805 14:08:09.947" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210805 14:08:09.931" endtime="20210805 14:08:09.947"></status>
+</suite>
+<status status="PASS" starttime="20210805 14:08:09.913" endtime="20210805 14:08:09.947"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Test">Test</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Suite Test">Test.Suite Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
