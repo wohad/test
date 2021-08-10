@@ -2,7 +2,11 @@
 <projectConfiguration>
     <configVersion>2</configVersion>
     <relativeTo>WORKSPACE</relativeTo>
-    <pythonpath/>
+    <referencedLibrary type="PYTHON" name="textfind" path="C:/Users/admin/PycharmProjects/pythonProject/textfind.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="textfind" path="test/textfind.py" dynamic="false"/>
+    <pythonpath>
+        <path location="C:\Users\admin\eclipse-workspace\test\textfind.py"/>
+    </pythonpath>
     <classpath/>
     <excludedForValidation/>
     <isValidatedFileSizeCheckingEnabled>true</isValidatedFileSizeCheckingEnabled>
